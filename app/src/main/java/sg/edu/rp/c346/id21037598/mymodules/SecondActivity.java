@@ -42,6 +42,7 @@ public class SecondActivity extends AppCompatActivity {
         + "\nModule Credit: " + moduleCredit
         + "\nVenue: " + moduleVenue);
 
+        // On click, goes back to main page
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
