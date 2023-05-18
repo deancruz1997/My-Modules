@@ -2,13 +2,17 @@ package sg.edu.rp.c346.id21037598.mymodules;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity {
 
     // Initialize variables
     TextView moduleOutput;
+    Button backBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +21,7 @@ public class SecondActivity extends AppCompatActivity {
 
         // Link xml element to variables
         moduleOutput = findViewById(R.id.moduleOutput);
+        backBtn = findViewById(R.id.backButton);
 
         // Get module object upon click of TextView in MainActivity class
         Module module = (Module) getIntent().getSerializableExtra("module");
@@ -36,5 +41,13 @@ public class SecondActivity extends AppCompatActivity {
         + "\nSemester: " + moduleSemester
         + "\nModule Credit: " + moduleCredit
         + "\nVenue: " + moduleVenue);
+
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SecondActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
