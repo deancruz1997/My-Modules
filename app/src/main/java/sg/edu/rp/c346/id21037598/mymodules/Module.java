@@ -6,7 +6,7 @@ import java.io.Serializable;
 public class Module implements Serializable {
 
     private String code, name, venue;
-    private int year = 2022, semester = 1, credit = 4;
+    private int year = 2023, semester = 1, credit = 4;
 
     public Module(String code, String name, String venue) {
         this.code = code;
