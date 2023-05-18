@@ -13,9 +13,11 @@ public class SecondActivity extends AppCompatActivity {
     // Initialize variables
     TextView moduleOutput;
     Button backBtn;
+    Button summaryBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
@@ -36,11 +38,11 @@ public class SecondActivity extends AppCompatActivity {
 
         // Display output
         moduleOutput.setText("Module Code: " + moduleCode
-        + "\nModule Name: " + moduleName
-        + "\nAcademic Year: " + moduleYear
-        + "\nSemester: " + moduleSemester
-        + "\nModule Credit: " + moduleCredit
-        + "\nVenue: " + moduleVenue);
+                + "\nModule Name: " + moduleName
+                + "\nAcademic Year: " + moduleYear
+                + "\nSemester: " + moduleSemester
+                + "\nModule Credit: " + moduleCredit
+                + "\nVenue: " + moduleVenue);
 
         // On click, goes back to main page
         backBtn.setOnClickListener(new View.OnClickListener() {
@@ -50,5 +52,6 @@ public class SecondActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 }
